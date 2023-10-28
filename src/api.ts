@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 
-export const app = express();
+const app = express();
 
 app.use(cors({ origin: true }));
 
@@ -22,3 +22,5 @@ api.get('/hello', (req, res) => {
 
 // Version the api
 app.use('/api/v1', api);
+
+export { app };
